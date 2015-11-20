@@ -351,6 +351,10 @@ update_config=1
 <?php
 }
 
+function SetPreConfig() {
+
+
+}
 /**
 *
 *
@@ -372,6 +376,10 @@ function DisplayHostAPDConfig(){
 	$arrChannel = array('a','b','g');
 	$arrSecurity = array( 1 => 'WPA', 2 => 'WPA2',3=> 'WPA+WPA2');
 	$arrEncType = array('TKIP' => 'TKIP', 'CCMP' => 'CCMP', 'TKIP CCMP' => 'TKIP+CCMP');
+
+    $arrConfig["ssid"] = "snappy-ap";
+    $arrConfig["channel"] = "10";
+    $arrConfig["wpa_passphrase"] = "00000000";
 
 	foreach( $return as $a ) {
 		if( $a[0] != "#" ) {
