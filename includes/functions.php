@@ -989,27 +989,20 @@ function DisplayTorProxyConfig(){
 function SaveHostAPDConfig(){
 	if( isset($_POST['SaveHostAPDSettings']) ) {
 		$config = 'driver=nl80211
-		ctrl_interface='. RASPI_HOSTAPD_CTRL_INTERFACE .'
-		ctrl_interface_group=0
-		beacon_int=100
-		auth_algs=1
-		wpa_key_mgmt=WPA-PSK';
+ctrl_interface='. RASPI_HOSTAPD_CTRL_INTERFACE .'
+ctrl_interface_group=0
+beacon_int=100
+auth_algs=1
+wpa_key_mgmt=WPA-PSK'.PHP_EOL;
 
-		$config .= "interface=".$_POST['interface']."
-		";
-		$config .= "ssid=".$_POST['ssid']."
-		";
-		$config .= "hw_mode=".$_POST['hw_mode']."
-		";
-		$config .= "channel=".$_POST['channel']."
-		";
-		$config .= "wpa=".$_POST['wpa']."
-		";
-		$config .='wpa_passphrase='.$_POST['wpa_passphrase'].'
-		';
-		$config .="wpa_pairwise=".$_POST['wpa_pairwise']."
-		";
-		$config .="country_code=".$_POST['country_code'];
+		$config .= "interface=".$_POST['interface'].PHP_EOL;
+		$config .= "ssid=".$_POST['ssid'].PHP_EOL;
+		$config .= "hw_mode=".$_POST['hw_mode'].PHP_EOL;
+		$config .= "channel=".$_POST['channel'].PHP_EOL;
+		$config .= "wpa=".$_POST['wpa'].PHP_EOL;
+		$config .='wpa_passphrase='.$_POST['wpa_passphrase'].PHP_EOL;
+		$config .="wpa_pairwise=".$_POST['wpa_pairwise'].PHP_EOL;
+		$config .="country_code=".$_POST['country_code'].PHP_EOL;
 
 		exec( "echo '$config' > /tmp/hostapddata", $return );
 		system( "sudo cp /tmp/hostapddata " . RASPI_HOSTAPD_CONFIG, $return );
