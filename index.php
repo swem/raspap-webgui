@@ -94,7 +94,7 @@ $page = $_GET['page'];
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
 	            </button>
-	            <a class="navbar-brand" href="index.html">RaspAP Wifi Portal v1.0</a>
+	            <a class="navbar-brand" href="index.html">Snappy-AP Wifi Router</a>
 			</div>
 			<!-- /.navbar-header -->
 
