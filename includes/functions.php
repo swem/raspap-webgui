@@ -1026,7 +1026,7 @@ wpa_key_mgmt=WPA-PSK'.PHP_EOL;
 		// TODO
 	} elseif( isset($_POST['StartHotspot']) ) {
 		echo "Attempting to start hotspot";
-        exec('sudo service hostapd restart', $return)
+        exec('sudo service hostapd restart', $return);
 		//exec( 'sudo /etc/init.d/hostapd start', $return );
 		foreach( $return as $line ) {
 			echo $line."<br />";
