@@ -1,4 +1,5 @@
 <?php
+// test
 
 /**
  * Raspbian WiFi Configuration Portal
