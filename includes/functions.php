@@ -1020,6 +1020,8 @@ wpa_key_mgmt=WPA-PSK'.PHP_EOL;
 		} else {
 			echo "Wifi Hotspot settings failed to be saved";
 		}
+		echo "Attempting to start hotspot";
+        exec('sudo service hostapd restart', $return);
 	} elseif( isset($_POST['SaveOpenVPNSettings']) ) {
 		// TODO
 	} elseif( isset($_POST['SaveTORProxySettings']) ) {
